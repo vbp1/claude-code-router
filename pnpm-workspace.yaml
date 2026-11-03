@@ -1,0 +1,5 @@
+packages:
+  - '.'
+
+patchedDependencies:
+  '@musistudio/llms@1.0.51': patches/@musistudio__llms@1.0.51.patch

@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "node scripts/build.js",
-    "test:rubytech-patches": "node scripts/test-rubytech-patches.mjs",
+    "test:rubytech-patches": "node scripts/test-rubytech-patches.mjs && node --test scripts/test-stream-lifecycle.mjs",
     "release": "npm run build && npm publish"
   },
   "keywords": [

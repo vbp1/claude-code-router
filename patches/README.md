@@ -6,6 +6,14 @@
 The patch maps Anthropic `tool_choice: any` to OpenAI `required` and forwards
 OpenAI `delta.reasoning` as Anthropic thinking events.
 
+For `just-ai/vllm-glm-5-3-fp8`, an explicit Anthropic `output_config.effort`
+is forwarded as the Chat Completions `reasoning_effort`: `low` → `low`,
+`medium` → `high`, `high` → `high`, and `max` → `max`. The legacy `reasoning`
+object is omitted for these requests to avoid conflicting thinking flags.
+Invalid explicit values return HTTP 400 before any upstream request. Requests
+without an explicit effort and requests for other models keep their existing
+behavior. The response token budget is unchanged.
+
 Outbound requests have a separate 60-second response-headers deadline. If the
 upstream does not send headers in time, CCR aborts the request and returns HTTP
 504 with `error.code: upstream_headers_timeout` and an explanatory message.

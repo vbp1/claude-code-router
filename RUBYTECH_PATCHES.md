@@ -6,6 +6,8 @@ streaming reliability fixes for the Rubytech vLLM gateway:
 
 - Map Anthropic `tool_choice: any` to OpenAI `tool_choice: required`.
 - Map streamed OpenAI `delta.reasoning` to Anthropic `thinking_delta` events.
+- Forward the selected Claude effort to `reasoning_effort` for Rubytech GLM-5.3;
+  preserve `low`, `high`, and `max`, and map `medium` to `high`.
 - Abort requests after 60 seconds without response headers, returning HTTP 504
   with error code `upstream_headers_timeout`.
 - Bound upstream body idle time to 60 seconds and emit Anthropic SSE errors for

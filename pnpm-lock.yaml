@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   '@musistudio/llms@1.0.51':
-    hash: 9cda7f59c79c3a1adcd46c5579511d2c56578b68fe52efed026dc7f666f71c22
+    hash: 07e099b7e7d504405b4002b9b5e4b083b763981bee4dc53772a8c08e87e939af
     path: patches/@musistudio__llms@1.0.51.patch
 
 importers:
@@ -21,7 +21,7 @@ importers:
         version: 5.5.0
       '@musistudio/llms':
         specifier: ^1.0.51
-        version: 1.0.51(patch_hash=9cda7f59c79c3a1adcd46c5579511d2c56578b68fe52efed026dc7f666f71c22)(ws@8.18.3)
+        version: 1.0.51(patch_hash=07e099b7e7d504405b4002b9b5e4b083b763981bee4dc53772a8c08e87e939af)(ws@8.18.3)
       dotenv:
         specifier: ^16.4.7
         version: 16.6.1
@@ -1373,7 +1373,7 @@ snapshots:
 
   '@lukeed/ms@2.0.2': {}
 
-  '@musistudio/llms@1.0.51(patch_hash=9cda7f59c79c3a1adcd46c5579511d2c56578b68fe52efed026dc7f666f71c22)(ws@8.18.3)':
+  '@musistudio/llms@1.0.51(patch_hash=07e099b7e7d504405b4002b9b5e4b083b763981bee4dc53772a8c08e87e939af)(ws@8.18.3)':
     dependencies:
       '@anthropic-ai/sdk': 0.54.0
       '@fastify/cors': 11.1.0
